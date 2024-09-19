@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Raleway;
-  src: url(../fonts/Raleway);
+  font-family: OpenSans;
+  src: url(/assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 @font-face {
-  font-family: OpenSans;
-  src: url(../fonts/Open_Sans);
+  font-family: Raleway;
+  src: url(/assets/fonts/Raleway/Raleway-VariableFont_wght.ttf);
 }
 * {
   margin: 0;
@@ -37,10 +37,46 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: none;
+}
+.nav_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+@media screen and (max-width: 900px) {
+  .nav_list {
+    gap: 40px;
+  }
+}
+.nav_list_elements {
+  list-style: none;
+}
+.nav_list_elements a {
+  font-family: OpenSans;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #070439;
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */

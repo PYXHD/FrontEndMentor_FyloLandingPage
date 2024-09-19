@@ -1,11 +1,19 @@
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include setFlex(row, space-between, center, none);
 
   &_list {
+    @include setFlex(row, space-between, center, 50px);
+
+    @media screen and (max-width: 900px) {
+      gap: 40px;
+    }
+
     &_elements {
+      list-style: none;
+
       a {
+        @include setFont($fontSecondary, 1rem, $weightNormal, $veryDarkBlue);
+        text-decoration: none;
       }
     }
   }
