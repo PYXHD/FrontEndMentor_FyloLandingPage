@@ -1,0 +1,24 @@
+.features {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 35px;
+
+  &_img {
+    aspect-ratio: 1/1;
+    background: url(/assets/images/illustration-1.svg) center/contain no-repeat;
+  }
+
+  &_content {
+    @include setFlex(column, space-between, center, 20px);
+    text-align: center;
+
+    &_title {
+      @include setFont($fontPrimary, 1.2rem, $weightBold, $veryDarkBlue);
+    }
+    &_text {
+      @include setFont($fontPrimary, 0.875rem, $weightNormal, $veryDarkBlue);
+    }
+    &_subscribe {
+    }
+  }
+}

@@ -16,11 +16,7 @@
   </head>
   <body>
     <nav class="nav">
-      <img
-        src="./assets/images/logo.svg"
-        alt="Logo du site"
-        class="lav_logo_img"
-      />
+      <img src="./assets/images/logo.svg" alt="Logo du site" class="nav_logo" />
       <ul class="nav_list">
         <li class="nav_list_elements">
           <a href="#features">Features</a>
@@ -35,18 +31,24 @@
     </nav>
 
     <main>
-      <section id="features">
-        <div></div>
-        <div>
-          <div>All your files in one secure location, accessible anywhere.</div>
-          <div>
+      <section id="features" class="features">
+        <div class="features_img"></div>
+        <div class="features_content">
+          <div class="features_content_title">
+            All your files in one secure location, accessible anywhere.
+          </div>
+          <div class="features_content_text">
             Fylo stores your most important files in one secure location. Access
             wherever you need, share and collaborate with friends, family, and
             co-workers.
           </div>
-          <div>
-            <input type="email" placeholder="Enter your email..." />
-            <button>Get started</button>
+          <div class="features_content_subscribe">
+            <input
+              class="inputMail"
+              type="email"
+              placeholder="Enter your email..."
+            />
+            <button class="btnMail" class="">Get Started</button>
           </div>
         </div>
       </section>

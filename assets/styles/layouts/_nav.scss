@@ -1,11 +1,23 @@
 .nav {
+  padding: 0 75px;
   @include setFlex(row, space-between, center, none);
 
+  @media screen and (max-width: 1000px) {
+    @include setFlex(column, center, center, 30px);
+    padding: 0 30px;
+  }
+
+  &_logo {
+    @media screen and (max-width: 1000px) {
+      width: 250px;
+    }
+  }
   &_list {
     @include setFlex(row, space-between, center, 50px);
 
-    @media screen and (max-width: 900px) {
-      gap: 40px;
+    @media screen and (max-width: 1000px) {
+      gap: 20px;
+      width: 80%;
     }
 
     &_elements {

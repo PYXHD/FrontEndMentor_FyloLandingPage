@@ -1,0 +1,64 @@
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: none;
+  gap: 35px;
+  background: url(/assets/images/bg-curve-desktop.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 0 75px;
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: none;
+    grid-template-rows: 1fr auto;
+    padding: 0 30px;
+  }
+
+  &_img {
+    order: 2;
+    aspect-ratio: 1/1;
+    background: url(/assets/images/illustration-1.svg) center/contain no-repeat;
+
+    @media screen and (max-width: 1000px) {
+      order: 1;
+      min-width: 200px;
+      width: 80%;
+      max-width: 500px;
+      min-height: 200px;
+      max-height: 500px;
+      place-self: center;
+    }
+  }
+
+  &_content {
+    order: 1;
+    @include setFlex(column, center, none, 15px);
+
+    @media screen and (max-width: 1000px) {
+      order: 2;
+      @include setFlex(column, space-between, center, 30px);
+      text-align: center;
+    }
+
+    &_title {
+      @include setFont($fontSecondary, 2rem, $weightBold, $veryDarkBlue);
+      line-height: 50px;
+
+      @media screen and (max-width: 1000px) {
+        @include setFont($fontSecondary, 1.5rem, $weightBold, $veryDarkBlue);
+        line-height: 40px;
+      }
+    }
+    &_text {
+      @include setFont($fontPrimary, 1rem, $weightNormal, $veryDarkBlue);
+    }
+    &_subscribe {
+      width: 100%;
+      @include setFlex(row, none, none, 20px);
+
+      @media screen and (max-width: 1000px) {
+        @include setFlex(column, center, center, 20px);
+      }
+    }
+  }
+}
